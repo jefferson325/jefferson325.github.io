@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
-    <title>Valuation Calculator</title>
+    <title>Kingswood Villas Valuation Tool</title>
 </head>
 <body>
-    <h1>Valuation Calculator</h1>
+    <h1>Kingswood Villas Valuation Tool</h1>
     <form><label>Phase</label><br>
         <select name="phase" id="phase">
             <option value=1>1</option>
@@ -48,7 +48,7 @@
         <input type="button" onclick="calculate()" value="Calculate">
     </form>
 <br><br>
-    <label>Value:</label><p id='valuation'></p>
+    <label>Price:</label><p id='valuation'></p>
     <label>SFA:</label><p id='SFA'></p>
     <label>Building date:</label><p id='bdate'></p>
 </body>
@@ -88,8 +88,8 @@
                 var CH = data[i][13];
                 var PLAZA = data[i][14];
                 var LUCKY = data[i][16];
-                v = -0.779751+0.002015*SFA-0.000000371*SFA*SFA+0.008626*AGE+0.007580*floor-0.000106*floor*floor+0.005709*VIEW_B+
-                0.031022*VIEW_M+0.001728*VIEW_P+0.008032*S-0.002264*W+0.119486*WR+0.042255*CH+0.104506*PLAZA+0.006625*LUCKY;
+                v = 0.293751+0.002017*SFA-0.000000372*SFA*SFA+0.008416*AGE+0.007578*floor-0.000106*floor*floor+0.006402*VIEW_B+
+                0.030411*VIEW_M +0.007832*S-0.002411*W+0.118217*WR+0.041683*CH+0.103221*PLAZA+0.006632*LUCKY;
                 truev = Math.pow(Math.E, v);
                 document.getElementById('valuation').innerHTML = Math.round(truev*1000000);
                 document.getElementById('valuation').style.color = "blue";
@@ -120,4 +120,3 @@
 </script>
 
 </html>
-
